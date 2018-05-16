@@ -1,0 +1,30 @@
+<view class="container">
+   <view>
+    <text class="txt">请选择您要选购的商品</text>
+   </view>
+  <view class="total">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="total">
+      <picker name="areaPicker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view>
+        当前选择商品：{{array[index]}}
+        </view>
+      </picker>
+    </view>
+  </form>
+    <view class="pay-list">
+        <view>请选择支付方式</view>
+        <view class="b">
+            <view class="item">
+                <view class="checkbox checked"></view>
+                <image src="/pages/index/images/wxpay.png" class="icon"></image>
+                <view class="name">微信支付</view>
+            </view>
+        </view>
+    </view>
+
+   <view class="pay-btn">
+    <button class="pay-btn" bindtap="openToast">确认支付</button>
+   </view>
+  </view>
+ </view>
